@@ -1,0 +1,10 @@
+string = input()
+stringLen = len(string)
+FindElem = 'c'
+
+for i in range(0, stringLen - 1):
+    if i != 3:
+        print(string[i])
+
+if FindElem in string:
+    print(f'{string} contains {FindElem}')
