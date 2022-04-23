@@ -1,0 +1,53 @@
+                                                        
+#  888888ba           dP  oo  88                                                    
+#  88    `8b          88      88                                                    
+#  88aaaa8P' .d8888b. 88  dP  88  .dP  .d8888b. 88d888b. 88d888b. .d8888b. dP   .dP 
+#  88        88'  `88 88  88  88888"   88'  `88 88'  `88 88'  `88 88'  `88 88   d8' 
+#  88        88.  .88 88  88  88  `8b. 88.  .88 88       88.  .88 88.  .88 88 .88'  
+#  dP        `88888P' dP  dP  dP   `YP `88888P8 dP       88Y888P' `88888P' 8888P'   
+#                                                        88                         
+#                                                        dP                         
+                                                                   
+                                                                                                                                                                                              
+                                               
+
+# Задание 1
+
+def task (x, y, z):
+	if z == "+" :
+		return (x + y)
+	elif z == "-":
+		return (x - y)
+	elif z == "*":
+		return (x * y)
+	elif z == "/":
+		return (x / y)
+	else :
+		return ("Неизвестная операция")
+print (task(231, 231, '+'))
+print (task(2, 2, '*'))
+print (task(5554, 31, '-'))
+print (task(231, 2, '/'))
+print (task(4, 2, 0))
+ 
+# Задание 2
+
+def reverse(s): 
+    return s[::-1] 
+def check_palindrome(s):
+    reversed_string = reverse(s)
+    if s == reversed_string:
+        print(s, "это полиндром")
+    else:
+        print(s, "это не полиндром")
+ 
+check_palindrome("довод")
+check_palindrome("дадая")
+
+# Задание 3
+
+a = [1111, 31, 81, 3, 99, 5, 1, 21, 75, 52, 132]
+for i in a:
+    if i < 5: print (i)
+
+   
