@@ -1,1 +1,54 @@
+#-----
 
+def task1(a):
+    res = 0
+    for i in range(1, len(a) - 1):
+        if int(a[i - 1]) < int(a[i]) and int(a[i]) > int(a[i + 1]):
+            res += 1
+    print(res)
+
+#-----
+
+def task2(a, x):
+    res = a.count(x)
+    a.append(x)
+    a.sort(reverse=True)
+    if res == 0:
+        return a.index(x)+1
+    else:
+        return a.index(x)+res+1
+
+#-----
+
+def task4(x1, y1, x2, y2):
+    return (((x1 - x2) ** 2) + ((y1 - y2) ** 2)) ** 0.5
+
+#-----
+
+def task5(a, n):
+    if n == 0:
+        return 1
+    else:
+        return a * task5(a, n - 1)
+
+#-----
+
+def task6():
+    elem = ("Ivanov paper 10, Petrov pens 5, Ivanov marker 3, Ivanov paper 7, Petrov envelope 20, Ivanov envelope 5").replace(', ', ',').split(',')
+    new_dict = dict()
+    for i in elem:
+        client, thing, value = i.split()
+        if not new_dict.get(client):
+            new_dict[client] = dict()
+        if not new_dict[client].get(thing):
+            new_dict[client][thing] = int(value)
+        else:
+            new_dict[client][thing] += int(value)
+    return new_dict
+
+
+print(task1([1,4,2,1,4,3,5,2,7]))
+print(task2([169,198,175,170,180],180))
+print(task4(2,-5,-4,3))
+print(task5(2,4))
+print(task6())
