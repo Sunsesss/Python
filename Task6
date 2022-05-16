@@ -1,0 +1,47 @@
+#-----
+
+class soda():
+    def __init__(self, add):
+        self.add = add
+
+    def show_my_drink(self):
+        if self.add:
+            print(f'Газировка и {self.add}')
+        else:
+            print('Обычная газировка')
+
+#-----
+
+class calculation():
+    def __init__(self, x, y, operation):
+        self.x = x
+        self.y = y
+        self.operation = operation
+
+    def calc(self):
+        if self.operation == '*':
+            return self.x * self.y
+        elif self.operation == '/':
+            return self.x / self.y
+        elif self.operation == '+':
+            return self.x + self.y
+        elif self.operation == '-':
+            return self.x - self.y
+        else:
+            return 'Неизвестная команда'
+
+
+
+drink1 = soda('')
+drink2 = soda('мята')
+drink1.show_my_drink()
+drink2.show_my_drink()
+
+calculator1 = calculation(9, 6, '+')
+calсulator2 = calculation(7, -2, '*')
+calculator3 = calculation(1, 2, '-')
+calсulator4 = calculation(21, 7, '/')
+print(calculator1.calc())
+print(calсulator2.calc())
+print(calculator3.calc())
+print(calсulator4.calc())
