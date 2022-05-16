@@ -1,0 +1,26 @@
+def task1():
+    a = input()
+    lst1 = a.split(',')
+    lst2 = []
+    for i in range(len(lst1)):
+        lst2.append(input())
+    res = dict(zip(lst1, lst2))
+    return res
+
+
+def task2():
+    my_dict = {'a': 500, 'b': 5874, 'c': 560, 'd': 400, 'e': 5874, 'f': 20}
+    print(sorted(my_dict.values())[-3:])
+
+
+def task3(year):
+    if year % 4 == 0 or (year % 100 != 0 and year % 400 == 0):
+        return True
+    else:
+        return False
+
+print(task1())
+print(task2())
+print(task3(2022))
+print(task3(2020))
+print(task3(2001))
